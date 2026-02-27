@@ -25,3 +25,12 @@ fs.readFile("texto.txt", "utf8", (err, data) => {
 
     console.log(data);
 });
+
+const http = require("http");
+
+const servidor = http.createServer((req, res) => {
+    res.end("Servidor funcionando");
+});
+
+servidor.listen(3000);
+
