@@ -28,9 +28,8 @@ fs.readFile("texto.txt", "utf8", (err, data) => {
 
 const http = require("http");
 
-const servidor = http.createServer((req, res) => {
-    res.end("Servidor funcionando");
-});
+const servidorPropio = http.createServer((req,res) => {
+    res.end('Este es mi primer servidor');
+})
 
-servidor.listen(3000);
-
+servidorPropio.listen(3000);
