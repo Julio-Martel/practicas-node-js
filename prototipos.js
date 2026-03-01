@@ -26,12 +26,25 @@ fs.readFile("texto.txt", "utf8", (err, data) => {
     console.log(data);
 });
 
-const http = require("http");
+/*const http = require("http");
 
 const servidorPropio = http.createServer((req,res) => {
+   req.headers["user-agent"]
     res.write('holaaa');
     res.write('Julioo')
     res.end();
 })
 
-servidorPropio.listen(3000);
+servidorPropio.listen(3000);*/
+
+const express = require("express");
+
+const app = express();
+
+app.get('/', (req,res) => {
+    res.end('hola mundo')
+})
+
+app.listen(3000, () => {
+    console.log("Servidor corriendo en puerto 3000");
+});
