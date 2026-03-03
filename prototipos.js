@@ -35,7 +35,7 @@ const servidorPropio = http.createServer((req,res) => {
     res.end();
 })
 
-servidorPropio.listen(3000);*/
+servidorPropio.listen(3000);
 
 const express = require("express");
 
@@ -47,4 +47,15 @@ app.get('/', (req,res) => {
 
 app.listen(3000, () => {
     console.log("Servidor corriendo en puerto 3000");
-});
+});*/
+
+const express = require("express");
+
+const servirdorNuevo = express();
+servirdorNuevo.get('/',(req,res) => {
+    res.end('Bienvenido a mi servidor');
+})
+
+servirdorNuevo.listen(3000,() => {
+    console.log('Servidor andando')
+})
